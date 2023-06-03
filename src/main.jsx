@@ -32,10 +32,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Auth0Provider domain='edwinpinzon.us.auth0.com' clientId='aW1UMxOK6A4BvwW5N6EzQejGRHVvmbCL' redirectUri={window.location.origin}>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <App />
-        <CssBaseline />
-      </BrowserRouter>
+    <BrowserRouter>
+      <App />
+      <CssBaseline />
+    </BrowserRouter>
     </ThemeProvider>
     </Auth0Provider>
   </React.StrictMode>,
