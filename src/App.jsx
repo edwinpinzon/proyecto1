@@ -1,7 +1,4 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { LoginButton } from './Login'
- import { profile } from './profile'
-import { LogoutButton } from './Logout'// Router
 import { Route, Routes } from "react-router-dom";
 // Slick-carrusel de generos de libros
 import "slick-carousel/slick/slick.css";
@@ -35,7 +32,6 @@ export default function App() {
     {title: 'Colecciones', path: './screens/Colecciones.jsx', icon:<CollectionsBookmarkIcon/>},
     {title: 'Promociones', path: './screens/Promociones.jsx', icon:<AttachMoneyIcon/>},
   ]
-
   return (
   <>
     <Navbar navArrayLinks={navArrayLinks}/>
@@ -52,7 +48,8 @@ export default function App() {
     <div className="carrusel">
       <Carrusel></Carrusel>
     </div>
-    
+    <div>
+</div>
     <Slider></Slider>
     <Footer></Footer>
   </>
