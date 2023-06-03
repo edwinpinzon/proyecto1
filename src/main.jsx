@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Auth0Provider } from '@auth0/auth0-react'
 import App from './App.jsx'
 
 import '@fontsource/roboto/300.css';
@@ -29,11 +30,13 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Auth0Provider domain='edwinpinzon.us.auth0.com' clientId='aW1UMxOK6A4BvwW5N6EzQejGRHVvmbCL' redirectUri={window.location.origin}>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <App />
         <CssBaseline />
       </BrowserRouter>
     </ThemeProvider>
+    </Auth0Provider>
   </React.StrictMode>,
 );

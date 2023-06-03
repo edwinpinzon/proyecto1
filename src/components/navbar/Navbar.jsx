@@ -1,3 +1,4 @@
+import { LoginButton } from "../../Login";
 import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import NavListDrawer from "./NavListDrawer";
 import { useState } from "react";
@@ -34,9 +35,19 @@ export default function Navbar({navArrayLinks}) {
 					<Button component={NavLink} to='../../screens/CarritoRegistro.jsx'>
 							<IconButton><AddShoppingCartIcon/></IconButton>
 					</Button>
-					<Button component='a' href="../../screens/Registro.jsx">
+					<Button component={LoginButton}>
+						<IconButton>
+						<HowToRegIcon />
+						</IconButton>
+						</Button>
+					{/* <Button component='a' href="../../screens/Registro.jsx">
 							<IconButton><HowToRegIcon/></IconButton>
-					</Button>
+					</Button> */}
+					{/* {isAuthenticated ? (
+						<LogoutButton />
+						) : (
+						<LoginButton />
+						)}	 */}
 				</Toolbar>
 			</AppBar>
 
