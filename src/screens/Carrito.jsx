@@ -4,7 +4,6 @@ import Footer from '../components/footer'
 function Carrito() {
   return (
     <div>
-      <Footer></Footer>
     </div>
   )
 }

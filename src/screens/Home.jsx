@@ -1,4 +1,3 @@
-import Navbar from "../components/navbar/Navbar"
 import Banner from "../components/Banner"
 import Carrusel from "../components/carrusel"
 import Slider from "../components/Slider"

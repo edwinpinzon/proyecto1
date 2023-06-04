@@ -1,11 +1,9 @@
-import { useAuth0 } from '@auth0/auth0-react'
 import { Route, Routes } from "react-router-dom";
 // Slick-carrusel de generos de libros
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Boostrap para el banner
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Paginas dentro de la web
@@ -52,15 +50,6 @@ export default function App() {
       </Routes>
       <Footer></Footer>
     </Container>
-    <div className="container">
-      <Banner></Banner>
-    </div>
-    <div className="carrusel">
-      <Carrusel></Carrusel>
-    </div>
-    
-    <Slider></Slider>
-    <Footer></Footer>
   </>
   )
 }
