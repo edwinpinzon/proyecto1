@@ -1,4 +1,6 @@
-import { LoginButton } from "../Login";
+import { LoginButton } from "../../Login";
+import {  LogoutButton } from "../../Logout";
+import { useAuth0 } from '@auth0/auth0-react'
 import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import NavListDrawer from "./NavListDrawer";
 import { useState } from "react";
@@ -11,6 +13,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 export default function Navbar({navArrayLinks}) {
 	const [open, setOpen] = useState(false)
+	const { isAuthenticated } = useAuth0();
 	
 	return(
 		<>
@@ -36,19 +39,39 @@ export default function Navbar({navArrayLinks}) {
 					<Button component={NavLink} to='/compras'>
 							<IconButton><AddShoppingCartIcon/></IconButton>
 					</Button>
-					<Button component={LoginButton}>
+					
+					<div>
+						{isAuthenticated ? (
+							<>
+							<profile/>
+							<LogoutButton>
+								<IconButton>
+								<HowToRegIcon />
+								</IconButton>
+							</LogoutButton>
+							
+						</>
+							):(
+							<LoginButton>
+								<IconButton>
+								<HowToRegIcon />
+								</IconButton>
+							</LoginButton>
+
+							)}
+					</div>
+					{/* <Button component={LoginButton}>
 						<IconButton>
 						<HowToRegIcon />
 						</IconButton>
-					</Button>
-					{/* <Button component='a' href="../../screens/Registro.jsx">
-							<IconButton><HowToRegIcon/></IconButton>
-					</Button> */}
-					{/* {isAuthenticated ? (
-						<LogoutButton />
-						) : (
-						<LoginButton />
-						)}	 */}
+						</Button>
+						<Button component={LogoutButton}>
+						<IconButton>
+						<HowToRegIcon />
+						</IconButton>
+						</Button> */}
+
+
 				</Toolbar>
 			</AppBar>
 

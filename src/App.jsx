@@ -1,9 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { LoginButton } from './components/Login'
-import { profile } from './components/profile'
-import { LogoutButton } from './components/Logout'// Router
-import { Route, Routes} from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 // Slick-carrusel de generos de libros
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -56,6 +52,15 @@ export default function App() {
       </Routes>
       <Footer></Footer>
     </Container>
+    <div className="container">
+      <Banner></Banner>
+    </div>
+    <div className="carrusel">
+      <Carrusel></Carrusel>
+    </div>
+    
+    <Slider></Slider>
+    <Footer></Footer>
   </>
   )
 }
