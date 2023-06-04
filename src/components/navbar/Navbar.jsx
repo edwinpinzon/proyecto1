@@ -9,7 +9,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import {NavLink} from 'react-router-dom'
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Navbar({navArrayLinks}) {
 	const [open, setOpen] = useState(false)
@@ -46,7 +47,7 @@ export default function Navbar({navArrayLinks}) {
 							<profile/>
 							<LogoutButton>
 								<IconButton>
-								<HowToRegIcon />
+									<LogoutIcon />
 								</IconButton>
 							</LogoutButton>
 							
@@ -54,24 +55,12 @@ export default function Navbar({navArrayLinks}) {
 							):(
 							<LoginButton>
 								<IconButton>
-								<HowToRegIcon />
+									<LoginIcon />
 								</IconButton>
 							</LoginButton>
 
 							)}
 					</div>
-					{/* <Button component={LoginButton}>
-						<IconButton>
-						<HowToRegIcon />
-						</IconButton>
-						</Button>
-						<Button component={LogoutButton}>
-						<IconButton>
-						<HowToRegIcon />
-						</IconButton>
-						</Button> */}
-
-
 				</Toolbar>
 			</AppBar>
 

@@ -14,6 +14,7 @@ import Home from './screens/Home';
 import Carrito from './screens/Carrito';
 import RegistroAdmin from './components/LoginAdmin'
 import Dashboard from './screens/Dashboard'
+import Terror from './screens/Terror';
 
 // Mui-navbar
 import { Container } from "@mui/material";
@@ -24,6 +25,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 // Componentes
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer";
+import NavbarAdmin from "./components/navbar/NavbarAdmin";
 
 // Estilos para la pagina
 import './styles/App.css'
@@ -45,11 +47,18 @@ export default function App() {
         <Route path="/promociones" element={<Promo />}/>
         <Route path="/colecciones" element={<Colecci />}/>
         <Route path="/compras" element={<Carrito />}/>
-        <Route path="/registroAdmin" element={<RegistroAdmin />}/>
+        <Route path="/terror" element={<Terror />}/>
         <Route path="/Admin" element={<Dashboard />}/>
       </Routes>
       <Footer></Footer>
     </Container>
+    {/* <Container>
+      <Routes>
+      <Navbar NavbarAdmin={NavbarAdmin}/>
+        <Route path="/registroAdmin" element={<RegistroAdmin />}/>
+        <Route path="/Admin" element={<Dashboard />}/>
+      </Routes>
+    </Container> */}
   </>
   )
 }
