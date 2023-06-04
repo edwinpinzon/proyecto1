@@ -1,6 +1,5 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import {Box} from '@mui/system'
-import { NavLink } from 'react-router-dom'
 
 
 export default function NavListDrawer({navArrayLinks, NavLink, setOpen}) {

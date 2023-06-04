@@ -1,8 +1,12 @@
 import React from 'react'
+import Footer from '../components/footer'
 
 function Colecciones() {
   return (
-    <div>Colecciones</div>
+    <div>
+      <h1>Colecciones</h1>
+      <Footer></Footer>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-import { LoginButton } from "../../Login";
-import {  LogoutButton } from "../../Logout";
+import { LoginButton } from "../Login";
+import {  LogoutButton } from "../Logout";
 import { useAuth0 } from '@auth0/auth0-react'
 import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import NavListDrawer from "./NavListDrawer";
@@ -8,10 +8,8 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import {NavLink} from 'react-router-dom'
-import Libro from '../../images/libro.png'
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
-// {title: 'Carrito', path: '../../screens/Carrito.jsx', icon:<AddShoppingCartIcon/>},
-// {title: 'Login', path: '../../screens/Login.jsx', icon:<HowToRegIcon/>},
 
 export default function Navbar({navArrayLinks}) {
 	const [open, setOpen] = useState(false)
@@ -26,16 +24,19 @@ export default function Navbar({navArrayLinks}) {
 					edge='start'>
 						<MenuOpenIcon/>
 					</IconButton>
-					<Typography variant="h5" sx={{flexGrow: 1, cursor: 'pointer'}}>
+					<Button component={NavLink} to='/'>
+							<IconButton><AutoStoriesIcon/></IconButton>
+					</Button>
+					<Typography variant="h5" sx={{flexGrow: 1}}>
 						Librarius
 					</Typography>
 					
-					<Box component={NavLink} to='/' sx={{display: {xs: 'none', sm: 'block'}}}>
+					<Box sx={{display: {xs: 'none', sm: 'block'}}}>
 						{navArrayLinks.map((item)=>(
 							<Button color="inherit" key={item.title} component={NavLink} to={item.path}>{item.title}</Button>
 						))}
 					</Box>
-					<Button component={NavLink} to='../../screens/CarritoRegistro.jsx'>
+					<Button component={NavLink} to='/compras'>
 							<IconButton><AddShoppingCartIcon/></IconButton>
 					</Button>
 					

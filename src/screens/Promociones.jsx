@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Promociones() {
+function Promo() {
   return (
-    <div>Promociones</div>
+    <div>
+      <h2>Promociones</h2>
+      <h1>Promociones</h1>
+    </div>
   )
 }
 
-export default Promociones
+export default Promo
