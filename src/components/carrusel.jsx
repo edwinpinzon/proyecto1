@@ -19,7 +19,7 @@ export default function Carrusel(){
 		{id:1, title:"Aventura", Icon: aventura, path:'../screens' },
 		{id:2, title:"Ficción", Icon:cienciaficcion, path:'../screens'},
 		{id:3, title:"Crimen", Icon:crimen, path:'../screens'},
-		{id:4, title:"Terror", Icon:terror, path:'../screens'},
+		{id:4, title:"Terror", Icon:terror, path:'/terror'},
 		{id:5, title:"Romance", Icon:romance , path:'../screens'},
 		{id:6, title:"Humor", Icon:humor , path:'../screens'},
 		{id:7, title:"Poesía", Icon:poesia , path:'../screens'},

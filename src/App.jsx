@@ -14,6 +14,7 @@ import Home from './screens/Home';
 import Carrito from './screens/Carrito';
 import RegistroAdmin from './components/LoginAdmin'
 import Dashboard from './screens/Dashboard'
+import Terror from './screens/Terror';
 
 // Mui-navbar
 import { Container } from "@mui/material";
@@ -37,19 +38,23 @@ export default function App() {
   ]
   return (
   <>
+    <Navbar navArrayLinks={navArrayLinks}/>
     <Container sx={{ mt: 4}}>
-      <Navbar navArrayLinks={navArrayLinks}/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/categoria" element={<Catego />}/>
         <Route path="/promociones" element={<Promo />}/>
         <Route path="/colecciones" element={<Colecci />}/>
         <Route path="/compras" element={<Carrito />}/>
+        <Route path="/terror" element={<Terror />}/>
         <Route path="/registroAdmin" element={<RegistroAdmin />}/>
         <Route path="/Admin" element={<Dashboard />}/>
       </Routes>
-      <Footer></Footer>
     </Container>
+    {/* <Container sx={{ mt: 12}}>
+      <Routes>
+      </Routes>
+    </Container> */}
   </>
   )
 }

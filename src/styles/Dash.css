@@ -1,0 +1,43 @@
+.paddingall{
+    padding: 10px 10px 10px 10px;
+}
+
+.admin{
+    padding-top: 50px;
+}
+
+.pricetitle{
+    font-weight: 600;
+}
+
+.pricesubtitle{
+    font-size: 14px;
+}
+
+.iconstyle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.iconstylev{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: aliceblue;
+}
+
+.iconstylewhite{
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.gradient{
+    background: rgb(92, 122, 211);
+    background: linear-gradient(158deg, rgb(108, 154, 226) 0%, rgb(101, 56, 155) 100%);
+}
+
+.gradientlight{
+    background: rgb(129, 225, 222);
+    background: linear-gradient(158deg, rgb(129, 129, 225) 0%, rgb(226, 172, 187) 100%);
+}
