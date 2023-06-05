@@ -25,7 +25,6 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 // Componentes
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer";
-import NavbarAdmin from "./components/navbar/NavbarAdmin";
 
 // Estilos para la pagina
 import './styles/App.css'
@@ -39,8 +38,8 @@ export default function App() {
   ]
   return (
   <>
+    <Navbar navArrayLinks={navArrayLinks}/>
     <Container sx={{ mt: 4}}>
-      <Navbar navArrayLinks={navArrayLinks}/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/categoria" element={<Catego />}/>
@@ -48,15 +47,12 @@ export default function App() {
         <Route path="/colecciones" element={<Colecci />}/>
         <Route path="/compras" element={<Carrito />}/>
         <Route path="/terror" element={<Terror />}/>
-        <Route path="/Admin" element={<Dashboard />}/>
-      </Routes>
-      <Footer></Footer>
-    </Container>
-    {/* <Container>
-      <Routes>
-      <Navbar NavbarAdmin={NavbarAdmin}/>
         <Route path="/registroAdmin" element={<RegistroAdmin />}/>
         <Route path="/Admin" element={<Dashboard />}/>
+      </Routes>
+    </Container>
+    {/* <Container sx={{ mt: 12}}>
+      <Routes>
       </Routes>
     </Container> */}
   </>

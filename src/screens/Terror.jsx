@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Divider, Stack, Grid, Container, styled, Typography, ButtonBase} from '@mui/material'
+import Footer from '../components/footer';
 
 import terror1 from '../images/terror1.jpeg';
 import terror2 from '../images/terror2.jpeg';
@@ -51,8 +52,11 @@ function Terror() {
 	]
 
 	return (
-		
-		<Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }} padding={10}>
+		<>
+			<div className='terror'>
+			<h2>Tus nuevos libros favoritos de terror</h2>
+			</div>
+			<Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }} padding={10}>
 			{librosTerror.map((item) => (
 				<Grid item xs={2} sm={4} md={4} key={item.id} direction='column' paddingBottom={5}>
 					<Grid item>
@@ -81,7 +85,9 @@ function Terror() {
 					</Grid>
 				</Grid>
 			))}
-		</Grid>
+			</Grid>
+		<Footer></Footer>
+		</>
 	)
 }
 
