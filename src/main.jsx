@@ -30,7 +30,7 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Auth0Provider domain='edwinpinzon.us.auth0.com' clientId='aW1UMxOK6A4BvwW5N6EzQejGRHVvmbCL' redirectUri={window.location.origin}>
+    <Auth0Provider domain='librarius.us.auth0.com' clientId='mItjqPS2Mzaof72fIqQaFMbMi0rL9VTU' redirectUri={window.location.origin}>
     <ThemeProvider theme={theme}>
     <BrowserRouter>
       <App />
